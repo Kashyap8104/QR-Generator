@@ -1,0 +1,41 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="header">
+        <span id="headername">QR Generator</span>
+    </section>
+    <section class="firstpart">
+        <label for="get_url">Enter URL:</label>
+        <input type="url" id="urll" name="get_url">
+        <br>
+        <input type="button" value="Generate QR" onclick="call_qr()">
+    </section>
+    <section class="printqr">
+        <img src="" id="image" >
+        <div id="showqr"></div>
+    </section>
+    <div class="developer-credit">Developed by Kashyap Manvar</div>
+    <script>
+        let dataa = document.getElementById("urll")
+        let imagee = document.getElementById("image");
+        function call_qr(){
+            imagee.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+dataa.value
+            
+            
+        }
+    </script>
+</body>
+</html>
+
+
+
+
